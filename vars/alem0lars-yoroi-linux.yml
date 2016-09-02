@@ -6,7 +6,6 @@ fullname: 'Alessandro Molari'
 downloads_dir: '~/downloads'
 
 irc:
-  nickname: 'alem0lars'
   servers:
     - name:     'freenode'
       address:  'Gemini.panicbnc.net/1338'
