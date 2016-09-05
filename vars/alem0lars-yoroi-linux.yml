@@ -1,47 +1,45 @@
-# => inherits: generic <= #
+# => inherits: generic, alem0lars <= #
 
-
-fullname: 'Alessandro Molari'
 
 downloads_dir: '~/downloads'
 
 irc:
   servers:
-    - name:     'freenode'
-      address:  'Gemini.panicbnc.net/1338'
-      password: 'alem0lars/freenode:<{lpass 4347818190421982338}>'
+    - name:     freenode
+      address:  Gemini.panicbnc.net/1338
+      password: alem0lars/freenode:<{lpass 4347818190421982338}>
       ssl: true
-    - name:     'ircnet'
-      address:  'Gemini.panicbnc.net/1338'
-      password: 'alem0lars/ircnet:<{lpass 4347818190421982338}>'
+    - name:     ircnet
+      address:  Gemini.panicbnc.net/1338
+      password: alem0lars/ircnet:<{lpass 4347818190421982338}>
       ssl: true
-    - name:     'undernet'
-      address:  'Gemini.panicbnc.net/1338'
-      password: 'alem0lars/undernet:<{lpass 4347818190421982338}>'
+    - name:     undernet
+      address:  Gemini.panicbnc.net/1338
+      password: alem0lars/undernet:<{lpass 4347818190421982338}>
       ssl: true
-    - name:     'efnet'
-      address:  'Gemini.panicbnc.net/1338'
-      password: 'alem0lars/efnet:<{lpass 4347818190421982338}>'
+    - name:     efnet
+      address:  Gemini.panicbnc.net/1338
+      password: alem0lars/efnet:<{lpass 4347818190421982338}>
       ssl: true
-    - name:     'espernet'
-      address:  'Gemini.panicbnc.net/1338'
-      password: 'alem0lars/espernet:<{lpass 4347818190421982338}>'
+    - name:     espernet
+      address:  Gemini.panicbnc.net/1338
+      password: alem0lars/espernet:<{lpass 4347818190421982338}>
       ssl: true
-    - name:     'smashthestack'
-      address:  'Gemini.panicbnc.net/1338'
-      password: 'alem0lars/smashthestack:<{lpass 4347818190421982338}>'
+    - name:     smashthestack
+      address:  Gemini.panicbnc.net/1338
+      password: alem0lars/smashthestack:<{lpass 4347818190421982338}>
       ssl: true
-    - name:     'cesena'
-      address:  'cesena.irc.slack.com/6697'
-      password: '<{lpass 7430321984273990216}>'
+    - name:     cesena
+      address:  cesena.irc.slack.com/6697
+      password: <{lpass 7430321984273990216}>
       ssl: true
-    - name:     'nextreamlabs'
-      address:  'nextreamlabs.irc.slack.com/6697'
-      password: '<{lpass 421597906486918984}>'
+    - name:     nextreamlabs
+      address:  nextreamlabs.irc.slack.com/6697
+      password: <{lpass 421597906486918984}>
       ssl: true
-    - name:     'twitch'
-      address:  'irc.twitch.tv/6667'
-      password: 'oauth:<{lpass 4347818190421982338}>'
+    - name:     twitch'
+      address:  irc.twitch.tv/6667
+      password: oauth:<{lpass 4347818190421982338}>
 
 
 # vim: set filetype=yaml :
