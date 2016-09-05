@@ -1,45 +1,58 @@
-# => inherits: generic, alem0lars <= #
+# => inherits: generic <= #
 
 
-downloads_dir: '~/downloads'
+nickname: &nickname alem0lars
+realname: &realname Alessandro Molari
+
+downloads_dir: ~/downloads
+weechat_dir: ~/.weechat
 
 irc:
   servers:
     - name:     freenode
       address:  Gemini.panicbnc.net/1338
-      password: alem0lars/freenode:<{lpass 4347818190421982338}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     ircnet
       address:  Gemini.panicbnc.net/1338
-      password: alem0lars/ircnet:<{lpass 4347818190421982338}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     undernet
       address:  Gemini.panicbnc.net/1338
-      password: alem0lars/undernet:<{lpass 4347818190421982338}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     efnet
       address:  Gemini.panicbnc.net/1338
-      password: alem0lars/efnet:<{lpass 4347818190421982338}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     espernet
       address:  Gemini.panicbnc.net/1338
-      password: alem0lars/espernet:<{lpass 4347818190421982338}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     smashthestack
       address:  Gemini.panicbnc.net/1338
-      password: alem0lars/smashthestack:<{lpass 4347818190421982338}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     cesena
       address:  cesena.irc.slack.com/6697
-      password: <{lpass 7430321984273990216}>
       ssl: true
+      nickname: *nickname
+      realname: *realname
     - name:     nextreamlabs
       address:  nextreamlabs.irc.slack.com/6697
-      password: <{lpass 421597906486918984}>
       ssl: true
-    - name:     twitch'
+      nickname: *nickname
+      realname: *realname
+    - name:     twitch
       address:  irc.twitch.tv/6667
-      password: oauth:<{lpass 4347818190421982338}>
+      nickname: *nickname
+      realname: *realname
 
 
 # vim: set filetype=yaml :

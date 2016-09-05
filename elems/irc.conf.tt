@@ -241,23 +241,20 @@ ssl_verify = on
 <%= server["name"] %>.ipv6
 <% if server["ssl"] %>
 <%= server["name"] %>.ssl = on
+<%= server["name"] %>.ssl_verify = on
 <% else %>
 <%= server["name"] %>.ssl
+<%= server["name"] %>.ssl_verify
 <% end %>
 <%= server["name"] %>.ssl_cert
 <%= server["name"] %>.ssl_priorities
 <%= server["name"] %>.ssl_dhkey_size
 <%= server["name"] %>.ssl_fingerprint
-<% if server["ssl"] %>
-<%= server["name"] %>.ssl_verify = on
-<% else %>
-<%= server["name"] %>.ssl_verify
-<% end %>
-<%= server["name"] %>.password
+<%= server["name"] %>.password = "${sec.data.<%= server["name"] %>}"
 <%= server["name"] %>.capabilities
 <%= server["name"] %>.sasl_mechanism
 <%= server["name"] %>.sasl_username
-<%= server["name"] %>.sasl_password = "${sec.data.<%= server["name"] %>}"
+<%= server["name"] %>.sasl_password
 <%= server["name"] %>.sasl_timeout
 <%= server["name"] %>.autoconnect = on
 <%= server["name"] %>.autoreconnect
@@ -276,8 +273,8 @@ ssl_verify = on
 <%= server["name"] %>.local_hostname
 <%= server["name"] %>.command
 <%= server["name"] %>.command_delay
-<% server["name"]["channels"].each do |channel| %>
-<%= server["name"] %>.autojoin = <%= channel["autojoin"] ? channel["name"] : "" %>
+<% if server["channels"] %>
+<%= server["name"] %>.autojoin = <%= server["channels"].map{|c| c["name"]}.join(", ") %>
 <% end %>
 <%= server["name"] %>.autorejoin
 <%= server["name"] %>.autorejoin_delay
