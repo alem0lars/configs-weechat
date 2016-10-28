@@ -55,4 +55,4 @@ irc:
       realname: *realname
 
 
-# vim: set filetype=yaml :
+# vim: set filetype=eruby.yaml :

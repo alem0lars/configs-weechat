@@ -1,26 +1,20 @@
 commands:
 
   - type: download
-    url: https://weechat.org/files/scripts/vimode.py
-    dst: '<%= get_var!(:weechat_dir, type: :dir).join("python", "vimode.py") %>'
-    only:
-      features:
-        - weechat
+    url:  https://weechat.org/files/scripts/vimode.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "vimode.py") %>'
+    only: f?weechat
 
   - type: download
-    url: https://weechat.org/files/scripts/colorize_nicks.py
-    dst: '<%= get_var!(:weechat_dir, type: :dir).join("python", "colorize_nicks.py") %>'
-    only:
-      features:
-        - weechat
+    url:  https://weechat.org/files/scripts/colorize_nicks.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "colorize_nicks.py") %>'
+    only: f?weechat
 
 elems:
 
-  - src: elems/(.+)$
-    dst: '<%= get_var!(:weechat_dir, type: :dir) %>/<1>'
-    only:
-      features:
-        - weechat
+  - src:  ^(.+)$
+    dst:  '<%= get_var! :weechat_dir, type: :directory %>/<1>'
+    only: f?weechat
 
 
 # vim: set filetype=eruby.yaml :
