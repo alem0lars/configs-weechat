@@ -4,7 +4,7 @@
 nickname: &nickname alem0lars
 realname: &realname Alessandro Molari
 
-downloads_dir: ~/downloads
+downloads_dir: /data/downloads
 weechat_dir: ~/.weechat
 
 irc:
