@@ -1,10 +1,11 @@
 # ─────────────────────────────────────────────────────────────────────────────┐
 #                                                                              │
-# Name:    elems/charset.conf.tt                                               │
-# Summary: Configure weechat charset.                                          │
+# Name:    elems/autosort.conf.tt                                              │
+# Summary: Configure weechat plugin `autosort`.                                │
 #                                                                              │
 # Authors:                                                                     │
 #   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
+#   - Giacomo Mantani (github.com/jak3)                                        │
 #                                                                              │
 # Project:                                                                     │
 #   - Homepage:        https://github.com/alem0lars/configs-weechat            │
@@ -32,13 +33,13 @@
 # ─────────────────────────────────────────────────────────────────────────────┘
 
 
-[default]
-decode = "iso-8859-1"
-encode = ""
-
-[decode]
-
-[encode]
+[sorting]
+case_sensitive = off
+group_irc = on
+replacements = "[]"
+rules = "[["core", 0], ["irc", 2], ["*", 1], ["irc.irc_raw", 0], ["irc.server", 1]]"
+signals = "buffer_opened buffer_merged buffer_unmerged buffer_renamed"
+sort_on_config_change = on
 
 
 # vim: set filetype=eruby.dosini :

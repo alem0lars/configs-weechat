@@ -33,16 +33,12 @@
 
 
 [command]
-
 default_options = ""
-
 purge_delay = 0
 
-
 [color]
-
 flag_finished = lightred
-flag_running  = lightgreen
+flag_running = lightgreen
 
 
 # vim: set filetype=eruby.dosini :

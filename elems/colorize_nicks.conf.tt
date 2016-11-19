@@ -33,7 +33,6 @@
 
 
 [look]
-
 blacklist_channels = ""
 blacklist_nicks = "so,root"
 colorize_input = on

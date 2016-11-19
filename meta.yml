@@ -1,14 +1,31 @@
 commands:
 
   - type: download
-    url:  https://weechat.org/files/scripts/vimode.py
-    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "vimode.py") %>'
+    url:  https://raw.githubusercontent.com/GermainZ/weechat-vimode/master/vimode.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "vimode.py") %>'
     only: f?weechat
 
   - type: download
     url:  https://weechat.org/files/scripts/colorize_nicks.py
-    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "colorize_nicks.py") %>'
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "colorize_nicks.py") %>'
     only: f?weechat
+
+  - type: download
+    url:  https://raw.githubusercontent.com/alem0lars/weechat-autosort/master/autosort.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "autosort.py") %>'
+    only: f?weechat
+
+  - type: download
+    url:  https://weechat.org/files/scripts/buffers.pl
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("perl", "autoload", "buffers.pl") %>'
+    only: f?weechat
+
+  - type: download
+    url:  https://raw.githubusercontent.com/rawdigits/wee-slack/master/wee_slack.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "wee_slack.py") %>'
+    only: f?weechat && f?slack
+    notes: |
+      needs python egg `websocket-client`
 
 elems:
 

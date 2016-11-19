@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────────────────────────────────────┐
 #                                                                              │
-# Name:    elems/exec.conf.tt                                                  │
-# Summary: Configure weechat exec.                                             │
+# Name:    elems/irc.conf.tt                                                   │
+# Summary: Configure weechat irc.                                              │
 #                                                                              │
 # Authors:                                                                     │
 #   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
@@ -30,144 +30,111 @@
 # See the License for the specific language governing permissions and          │
 # limitations under the License.                                               │
 #                                                                              │
-" ─────────────────────────────────────────────────────────────────────────────┤
+# ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
   variable :"irc.servers", as: :servers
-end -%>
+end %>
 # ─────────────────────────────────────────────────────────────────────────────┘
 
 
 [look]
-
-buffer_open_before_autojoin = on
-buffer_open_before_join     = off
-
-buffer_switch_autojoin = on
-buffer_switch_join     = on
-
+buffer_open_before_autojoin    = on
+buffer_open_before_join        = off
+buffer_switch_autojoin         = on
+buffer_switch_join             = on
 color_nicks_in_names           = off
 color_nicks_in_nicklist        = off
 color_nicks_in_server_messages = on
 color_pv_nick_like_channel     = on
-
-ctcp_time_format = "%a, %d %b %Y %T %z"
-
-display_away            = local
-display_ctcp_blocked    = on
-display_ctcp_reply      = on
-display_ctcp_unknown    = on
-display_host_join       = on
-display_host_join_local = on
-display_host_quit       = on
-display_join_message    = "329,332,333,366"
-display_old_topic       = on
-display_pv_away_once    = on
-display_pv_back         = on
-
-highlight_channel       = "$nick"
-highlight_pv            = "$nick"
-highlight_server        = "$nick"
-highlight_tags_restrict = "irc_privmsg,irc_notice"
-
-item_away_message            = on
-item_channel_modes_hide_args = "k"
-item_display_server          = buffer_plugin
-item_nick_modes              = on
-item_nick_prefix             = on
-
-join_auto_add_chantype = off
-
-msgbuffer_fallback = current
-
-new_channel_position = none
-new_pv_position      = none
-
-nick_color_force      = ""
-nick_color_hash       = sum
-nick_color_stop_chars = "_|["
-nick_completion_smart = speakers
-nick_mode             = prefix
-nick_mode_empty       = off
-nicks_hide_password   = "nickserv"
-
-notice_as_pv            = auto
-notice_welcome_redirect = on
-notice_welcome_tags     = ""
-
-notify_tags_ison  = "notify_message"
-notify_tags_whois = "notify_message"
-
-part_closes_buffer = off
-
-pv_buffer = independent
-pv_tags   = "notify_private"
-
-raw_messages = 256
-
-server_buffer = merge_with_core
-
-smart_filter             = on
-smart_filter_delay       = 5
-smart_filter_join        = on
-smart_filter_join_unmask = 30
-smart_filter_mode        = "+"
-smart_filter_nick        = on
-smart_filter_quit        = on
-
-temporary_servers = off
-
-topic_strip_colors = off
+ctcp_time_format               = "%a, %d %b %Y %T %z"
+display_away                   = local
+display_ctcp_blocked           = on
+display_ctcp_reply             = on
+display_ctcp_unknown           = on
+display_host_join              = on
+display_host_join_local        = on
+display_host_quit              = on
+display_join_message           = "329,332,333,366"
+display_old_topic              = on
+display_pv_away_once           = on
+display_pv_back                = on
+highlight_channel              = "$nick"
+highlight_pv                   = "$nick"
+highlight_server               = "$nick"
+highlight_tags_restrict        = "irc_privmsg,irc_notice"
+item_away_message              = on
+item_channel_modes_hide_args   = "k"
+item_display_server            = buffer_plugin
+item_nick_modes                = on
+item_nick_prefix               = on
+join_auto_add_chantype         = off
+msgbuffer_fallback             = current
+new_channel_position           = none
+new_pv_position                = none
+nick_color_force               = ""
+nick_color_hash                = sum
+nick_color_stop_chars          = "_|["
+nick_completion_smart          = speakers
+nick_mode                      = prefix
+nick_mode_empty                = off
+nicks_hide_password            = "nickserv"
+notice_as_pv                   = auto
+notice_welcome_redirect        = on
+notice_welcome_tags            = ""
+notify_tags_ison               = "notify_message"
+notify_tags_whois              = "notify_message"
+part_closes_buffer             = off
+pv_buffer                      = independent
+pv_tags                        = "notify_private"
+raw_messages                   = 256
+server_buffer                  = independent
+smart_filter                   = on
+smart_filter_delay             = 5
+smart_filter_join              = on
+smart_filter_join_unmask       = 30
+smart_filter_mode              = "+"
+smart_filter_nick              = on
+smart_filter_quit              = on
+temporary_servers              = off
+topic_strip_colors             = off
 
 
 [color]
 
-input_nick = lightcyan
-
+input_nick         = lightcyan
 item_away          = yellow
 item_channel_modes = default
 item_lag_counting  = default
 item_lag_finished  = yellow
 item_nick_modes    = default
-
-message_join = green
-message_quit = red
-
-mirc_remap = "1,-1:darkgray"
-
-nick_prefixes = "q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue"
-
-notice = green
-
-reason_quit = default
-
-topic_new = white
-topic_old = default
+message_join       = green
+message_quit       = red
+mirc_remap         = "1,-1:darkgray"
+nick_prefixes      = "q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue"
+notice             = green
+reason_quit        = default
+topic_current      = default
+topic_new          = white
+topic_old          = default
 
 
 [network]
 
-alternate_nick = on
-
 autoreconnect_delay_growing = 2
 autoreconnect_delay_max     = 600
-
-ban_mask_default = "*!$ident@$host"
-
-colors_receive = on
-colors_send    = on
-
-lag_check            = 60
-lag_max              = 1800
-lag_min_show         = 500
-lag_reconnect        = 0
-lag_refresh_interval = 1
-
-notify_check_ison  = 1
-notify_check_whois = 5
-
-send_unknown_commands = off
-
-whois_double_nick = off
+ban_mask_default            = "*!$ident@$host"
+channel_encode              = off
+colors_receive              = on
+colors_send                 = on
+lag_check                   = 60
+lag_max                     = 1800
+lag_min_show                = 500
+lag_reconnect               = 0
+lag_refresh_interval        = 1
+notify_check_ison           = 1
+notify_check_whois          = 5
+send_unknown_commands       = off
+whois_double_nick           = off
 
 
 [msgbuffer]
@@ -181,112 +148,99 @@ whois_double_nick = off
 
 [server_default]
 
-addresses = ""
-
+addresses            = ""
 anti_flood_prio_high = 2
 anti_flood_prio_low  = 2
-
-autoconnect         = off
-autojoin            = ""
-autoreconnect       = on
-autoreconnect_delay = 10
-autorejoin          = off
-autorejoin_delay    = 30
-
+autoconnect          = off
+autojoin             = ""
+autoreconnect        = on
+autoreconnect_delay  = 10
+autorejoin           = off
+autorejoin_delay     = 30
 away_check           = 0
 away_check_max_nicks = 25
-
-capabilities = ""
-
-command       = ""
-command_delay = 0
-
-connection_timeout = 60
-
-default_msg_kick = ""
-default_msg_part = "Part."
-default_msg_quit = "Quit."
-
-ipv6 = on
-
-local_hostname = ""
-
-nicks = ""
-username = ""
-realname = ""
-password = ""
-
-notify = ""
-
-proxy = ""
-
-sasl_mechanism = plain
-sasl_password = ""
-sasl_timeout = 15
-sasl_username = ""
-
-ssl = off
-ssl_cert = ""
-ssl_dhkey_size = 2048
-ssl_fingerprint = ""
-ssl_priorities = "NORMAL"
-ssl_verify = on
-
-<% local!(:servers).each do |server| %>
+capabilities         = ""
+command              = ""
+command_delay        = 0
+connection_timeout   = 60
+default_msg_kick     = ""
+default_msg_part     = "Part."
+default_msg_quit     = "Quit."
+ipv6                 = on
+local_hostname       = ""
+nicks                = ""
+nicks_alternate      = on
+notify               = ""
+password             = ""
+proxy                = ""
+realname             = ""
+sasl_fail            = continue
+sasl_key             = ""
+sasl_mechanism       = plain
+sasl_password        = ""
+sasl_timeout         = 15
+sasl_username        = ""
+ssl                  = off
+ssl_cert             = ""
+ssl_dhkey_size       = 2048
+ssl_fingerprint      = ""
+ssl_priorities       = "NORMAL"
+ssl_verify           = off
+username             = ""
 
 [server]
-
-<%= server["name"] %>.addresses = "<%= server["address"] %>"
-<%= server["name"] %>.proxy
-<%= server["name"] %>.ipv6
-<% if server["ssl"] %>
-<%= server["name"] %>.ssl = on
-<%= server["name"] %>.ssl_verify = on
+<% local!(:servers).each do |server| %>
+<%= server[:name] %>.addresses = "<%= server[:address] %>"
+<%= server[:name] %>.proxy
+<%= server[:name] %>.ipv6
+<% if server[:ssl] %>
+<%= server[:name] %>.ssl = on
+<%= server[:name] %>.ssl_verify = on
 <% else %>
-<%= server["name"] %>.ssl
-<%= server["name"] %>.ssl_verify
+<%= server[:name] %>.ssl
+<%= server[:name] %>.ssl_verify
 <% end %>
-<%= server["name"] %>.ssl_cert
-<%= server["name"] %>.ssl_priorities
-<%= server["name"] %>.ssl_dhkey_size
-<%= server["name"] %>.ssl_fingerprint
-<%= server["name"] %>.password = "${sec.data.<%= server["name"] %>}"
-<%= server["name"] %>.capabilities
-<%= server["name"] %>.sasl_mechanism
-<%= server["name"] %>.sasl_username
-<%= server["name"] %>.sasl_password
-<%= server["name"] %>.sasl_timeout
-<%= server["name"] %>.autoconnect = on
-<%= server["name"] %>.autoreconnect
-<%= server["name"] %>.autoreconnect_delay
-<% if server["nickname"] %>
-<%= server["name"] %>.nicks = "<%= server["nickname"] %>"
+<%= server[:name] %>.ssl_cert
+<%= server[:name] %>.ssl_priorities
+<%= server[:name] %>.ssl_dhkey_size
+<%= server[:name] %>.ssl_fingerprint
+<%= server[:name] %>.password = "${sec.data.<%= server[:name] %>}"
+<%= server[:name] %>.capabilities
+<%= server[:name] %>.sasl_mechanism
+<%= server[:name] %>.sasl_username
+<%= server[:name] %>.sasl_password
+<%= server[:name] %>.sasl_timeout
+<%= server[:name] %>.autoconnect = on
+<%= server[:name] %>.autoreconnect
+<%= server[:name] %>.autoreconnect_delay
+<% if server[:nickname] %>
+<%= server[:name] %>.nicks = "<%= server[:nickname] %>"
 <% else %>
-<%= server["name"] %>.nicks
+<%= server[:name] %>.nicks
 <% end %>
-<%= server["name"] %>.username
-<% if server["nickname"] %>
-<%= server["name"] %>.realname = "<%= server["realname"] %>"
+<%= server[:name] %>.username
+<% if server[:nickname] %>
+<%= server[:name] %>.realname = "<%= server[:realname] %>"
 <% else %>
-<%= server["name"] %>.realname
+<%= server[:name] %>.realname
 <% end %>
-<%= server["name"] %>.local_hostname
-<%= server["name"] %>.command
-<%= server["name"] %>.command_delay
-<% if server["channels"] %>
-<%= server["name"] %>.autojoin = <%= server["channels"].map{|c| c["name"]}.join(", ") %>
+<%= server[:name] %>.local_hostname
+<%= server[:name] %>.command
+<%= server[:name] %>.command_delay
+<% if server[:channels] %>
+<%= server[:name] %>.autojoin = <%= server[:channels].map{ |c| c[:name] }.join(", ") %>
 <% end %>
-<%= server["name"] %>.autorejoin
-<%= server["name"] %>.autorejoin_delay
-<%= server["name"] %>.connection_timeout
-<%= server["name"] %>.anti_flood_prio_high
-<%= server["name"] %>.anti_flood_prio_low
-<%= server["name"] %>.away_check
-<%= server["name"] %>.away_check_max_nicks
-<%= server["name"] %>.default_msg_kick
-<%= server["name"] %>.default_msg_part
-<%= server["name"] %>.default_msg_quit
-<%= server["name"] %>.notify
+<%= server[:name] %>.autorejoin
+<%= server[:name] %>.autorejoin_delay
+<%= server[:name] %>.connection_timeout
+<%= server[:name] %>.anti_flood_prio_high
+<%= server[:name] %>.anti_flood_prio_low
+<%= server[:name] %>.away_check
+<%= server[:name] %>.away_check_max_nicks
+<%= server[:name] %>.default_msg_kick
+<%= server[:name] %>.default_msg_part
+<%= server[:name] %>.default_msg_quit
+<%= server[:name] %>.notify
 <% end %>
 
 
