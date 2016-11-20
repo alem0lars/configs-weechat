@@ -27,6 +27,16 @@ commands:
     notes: |
       needs python egg `websocket-client`
 
+  - type: download
+    url:  https://weechat.org/files/scripts/urlgrab.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "urlgrab.py") %>'
+    only: f?weechat
+
+  - type: download
+    url:  https://weechat.org/files/scripts/lnotify.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "lnotify.py") %>'
+    only: f?weechat
+
 elems:
 
   - src:  ^(.+)$
