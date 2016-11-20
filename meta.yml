@@ -37,6 +37,11 @@ commands:
     dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "lnotify.py") %>'
     only: f?weechat
 
+  - type: download
+    url:  https://weechat.org/files/scripts/shortenurl.py
+    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "shortenurl.py") %>'
+    only: f?weechat
+
 elems:
 
   - src:  ^(.+)$
