@@ -218,8 +218,12 @@ username             = ""
 <% else %>
 <%= server[:name] %>.nicks
 <% end %>
+<% if server[:username] %>
+<%= server[:name] %>.username = "<%= server[:username] %>"
+<% else %>
 <%= server[:name] %>.username
-<% if server[:nickname] %>
+<% end %>
+<% if server[:realname] %>
 <%= server[:name] %>.realname = "<%= server[:realname] %>"
 <% else %>
 <%= server[:name] %>.realname

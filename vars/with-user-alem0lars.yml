@@ -7,33 +7,39 @@ weechat_dir: ~/.weechat
 irc:
   servers:
     - name:     freenode
-      address:  Gemini.panicbnc.net/1338
-      ssl: true
+      address:  Gemini.panicbnc.net/1337
+      ssl:      false
+      username: alem0lars/freenode
       nickname: *nickname
       realname: *realname
     - name:     ircnet
-      address:  Gemini.panicbnc.net/1338
-      ssl: true
+      address:  Gemini.panicbnc.net/1337
+      ssl: false
+      username: alem0lars/ircnet
       nickname: *nickname
       realname: *realname
     - name:     undernet
-      address:  Gemini.panicbnc.net/1338
-      ssl: true
+      address:  Gemini.panicbnc.net/1337
+      ssl: false
+      username: alem0lars/undernet
       nickname: *nickname
       realname: *realname
     - name:     efnet
-      address:  Gemini.panicbnc.net/1338
-      ssl: true
+      address:  Gemini.panicbnc.net/1337
+      ssl: false
+      username: alem0lars/efnet
       nickname: *nickname
       realname: *realname
     - name:     espernet
-      address:  Gemini.panicbnc.net/1338
-      ssl: true
+      address:  Gemini.panicbnc.net/1337
+      ssl: false
+      username: alem0lars/espernet
       nickname: *nickname
       realname: *realname
     - name:     smashthestack
-      address:  Gemini.panicbnc.net/1338
-      ssl: true
+      address:  Gemini.panicbnc.net/1337
+      ssl: false
+      username: alem0lars/smashthestack
       nickname: *nickname
       realname: *realname
 
