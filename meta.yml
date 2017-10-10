@@ -16,11 +16,6 @@ commands:
     only: f?weechat
 
   - type: download
-    url:  https://weechat.org/files/scripts/buffers.pl
-    dst:  '<%= get_var!(:weechat_dir, type: :dir).join("perl", "autoload", "buffers.pl") %>'
-    only: f?weechat
-
-  - type: download
     url:  https://raw.githubusercontent.com/rawdigits/wee-slack/master/wee_slack.py
     dst:  '<%= get_var!(:weechat_dir, type: :dir).join("python", "autoload", "wee_slack.py") %>'
     only: f?weechat && f?slack
