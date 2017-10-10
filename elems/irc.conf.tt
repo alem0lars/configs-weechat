@@ -195,10 +195,10 @@ username             = ""
 <%= server[:name] %>.ipv6
 <% if server[:ssl] %>
 <%= server[:name] %>.ssl = on
-<%= server[:name] %>.ssl_verify = on
+<%= server[:name] %>.ssl_verify = <%= server[:ssl_verify] ? "on" : "off" %>
 <% else %>
-<%= server[:name] %>.ssl
-<%= server[:name] %>.ssl_verify
+<%= server[:name] %>.ssl = off
+<%= server[:name] %>.ssl_verify = off
 <% end %>
 <%= server[:name] %>.ssl_cert
 <%= server[:name] %>.ssl_priorities
