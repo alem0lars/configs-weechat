@@ -13,6 +13,13 @@ irc:
       username: alem0lars/freenode
       nickname: *nickname
       realname: *realname
+    - name: netgarage
+      address: 10.20.4.254/6501
+      ssl: true
+      ssl_verify: false
+      username: alem0lars/netgarage
+      nickname: *nickname
+      realname: *realname
 
 
 # vim: set filetype=eruby.yaml :
